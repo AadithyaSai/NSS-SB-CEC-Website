@@ -9,6 +9,178 @@
   </head>
   <body>
     <h1>This is the first prototype of NSS CEC's website</h1>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Subdivisions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .forum-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .forum-item {
+            flex: 1;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #444; /* Dark Gray */
+            background-color: #fff;
+            margin: 0 10px;
+        }
+        .nrpf {
+            background-color: #035412; /* Green */
+        }
+        .ktu-care {
+            background-color: #0f0f0f; /* Black */
+        }
+        .rudrasena {
+            background-color: #660808; /* Red */
+        }
+        .thanal {
+            background-color: #400259; /* Purple */
+        }
+        h2, p {
+            color: #fff6f6; /* Light Gray */
+        }
+        h2 {
+            font-family: 'Arial', sans-serif; /* Change the font of the heading */
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="forum-container">
+        <div class="forum-item nrpf">
+            <h2>NRPF</h2>
+            <p>National Resource Protection Force (NRPF) attempts to form units of environmentally conscious students in colleges who will in turn help to protect and maintain the natural resources. The main focus is to make the students environmentally sensitive. This includes two major programs traatag and thanal.</p>
+        </div>
+        <div class="forum-item ktu-care">
+            <h2>KTU CARE</h2>
+            <p>KTU Care, a flagship program of the KTU NSS Cell, is dedicated to providing compassionate support and care to the elderly. Through palliative care visits and various initiatives, KTU Care aims to enhance the well-being and comfort of older individuals, ensuring they receive the attention and assistance they deserve.</p>
+        </div>
+        <div class="forum-item rudrasena">
+            <h2>RUDRASENA</h2>
+            <p>Rudrasena is a flagship program, committed to bolstering blood donation initiatives and providing timely assistance to those in need. Through active engagement with blood donors and swift response to blood donation cases, Rudrasena aims to ensure a steady supply of blood and contribute to saving lives.</p>
+        </div>
+        <div class="forum-item thanal">
+            <h2>ENERGY CELL</h2>
+            <p>The Energy Cell, a flagship initiative, is dedicated to the cause of energy conservation. Its primary focus lies in organizing energy audits conducted by volunteers. Through these audits, it promote awareness and implementation of sustainable energy practices, thereby contributing to the broader goal of resource efficiency.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+            flex: 1;
+        }
+        img {
+            width: 100%; /* Enlarge width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+            max-height: 400px; /* Enlarge height */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            opacity: 0.3;
+        }
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0.7;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src=".vscode\images\nss5.jpeg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src=".vscode\images\nss4.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src=".vscode\images\nss3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            document.querySelector('.carousel').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
+
 
     <!-- Custom JS -->
     <script src="js/index.js"></script>
