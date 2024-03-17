@@ -62,6 +62,38 @@ body {
     color: black;
     line-height: 1.5;
   }
+
+
+
+  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.topic {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: large;
+}
+
+.topic h2 {
+  color: black;
+  margin-top: 0;
+  font-size: large;
+  
+}
+
+.topic p {
+  color: black;
+  line-height: 1.5;
+  font-size:large;
+}
+
   
 
 
