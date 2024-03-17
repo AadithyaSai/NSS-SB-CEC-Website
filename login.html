@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/login.css" />
+  </head>
+  <body>
+    <section>
+      <div class="signin">
+        <div class="content">
+          <h2>Sign In</h2>
+
+          <form id="loginForm" class="form">
+            <div class="inputBox">
+              <input id="usernameField" type="text" required />
+              <i>Username</i>
+            </div>
+
+            <div class="inputBox">
+              <input id="passwordField" type="password" required />
+              <i>Password</i>
+            </div>
+
+            <div class="inputBox">
+              <input type="submit" value="Login" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <form id="loginForm">
+      <label for="usernameField">Username:</label>
+      <input type="text" name="username" id="usernameField" />
+      <br />
+      <label for="passwordField">Password:</label>
+      <input type="password" name="password" id="passwordField" />
+      <br />
+      <button type="submit">Log In</button>
+    </form> -->
+    <!-- Custom JS -->
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>

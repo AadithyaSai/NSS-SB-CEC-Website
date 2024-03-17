@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSS CEC</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/profile.css" />
+  </head>
+  <body>
+    <span id="wait">Please Wait...</span>
+    <div id="content" class="hide">
+      <br />
+
+      <p>Hours attended: <span id="hourCount">-1</span></p>
+
+      <br />
+
+      <div id="fileUploadDiv">
+        <div>
+          <h3>Blood Files</h3>
+          <div id="bloodDone" class="hide">
+            Documents uploaded successfully!
+          </div>
+          <form id="bloodForm" class="dataForm">
+            <label for="bloodCert">Blood Donation Certificate: </label>
+            <input
+              type="file"
+              name="bloodCert"
+              id="bloodCert"
+              accept="image/*, .pdf"
+              required
+            />
+            <label for="bloodProof">Blood Donation Proof: </label>
+            <input
+              type="file"
+              name="bloodProof"
+              id="bloodProof"
+              accept="image/*"
+              required
+            />
+            <button>Submit Files</button>
+          </form>
+        </div>
+        <br />
+        <div>
+          <h3>Thanal Files</h3>
+          <div id="thanalDone" class="hide">
+            Documents uploaded successfully!
+          </div>
+          <form id="thanalForm" class="dataForm">
+            <label for="thanalProof">Thanal Proof: </label>
+            <input
+              type="file"
+              name="thanalProof"
+              id="thanalProof"
+              accept="image/*"
+              required
+            />
+            <button>Submit Files</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Custom JS -->
+    <script type="module" src="js/profile.js"></script>
+  </body>
+</html>
