@@ -19,6 +19,11 @@
     />
     <link rel="shortcut icon" href="assets/favicon.ico" />
 
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/f873f30408.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style/index.css" />
   </head>
@@ -26,24 +31,24 @@
     <!-- Header Section -->
     <header>
       <div class="logo">
-        <img src="new\images\logo.png" />
+        <img src="assets/nss logo with text.png" />
       </div>
       <div class="logo2">
-        <img src="new\images\ceclogo.png" />
+        <img src="assets/cec logo.png" />
       </div>
       <div class="social-media">
         <a href="https://www.facebook.com/cecnssofficial/"
-          ><img src="new\images\fb.png" alt="Facebook"
-        /></a>
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
         <a href="https://www.instagram.com/nss_cec_units/"
-          ><img src="new\images\instagram.png" alt="Instagram"
-        /></a>
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
         <a href="https://in.linkedin.com/company/nss-cec-units"
-          ><img src="new\images\linkedin.png" alt="LinkedIn"
-        /></a>
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
         <a href="https://twitter.com/nsscechengannur"
-          ><img src="new\images\twitter.png" alt="Twitter"
-        /></a>
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
       </div>
     </header>
 
@@ -51,39 +56,43 @@
     <nav>
       <div class="container">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">EVENTS</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about-us">ABOUT US</a></li>
+          <li><a href="#events">EVENTS</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li><a href="#">LOGIN</a></li>
+          <li><a href="login.html">LOGIN</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Main Content Section -->
-    <div class="container">
+    <div id="home" class="container">
       <!-- Gallery Carousel -->
       <div class="carousel-container">
         <div class="carousel">
           <div class="slide">
-            <img src=".vscode\images\nss5.jpeg" alt="Image 1" />
+            <img src="assets/nss5.jpeg" alt="Image 1" />
           </div>
           <div class="slide">
-            <img src=".vscode\images\nss4.jpg" alt="Image 2" />
+            <img src="assets/nss4.jpg" alt="Image 2" />
           </div>
           <div class="slide">
-            <img src=".vscode\images\nss3.jpg" alt="Image 3" />
+            <img src="assets/nss3.jpg" alt="Image 3" />
           </div>
         </div>
-        <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
-        <button class="arrow arrow-right" onclick="nextSlide()">
-          &#10095;
+        <button class="arrow arrow-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="arrow arrow-right">
+          <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
 
+      <div class="motto">NOT ME BUT YOU!</div>
+
       <div class="about-and-announcement">
         <!-- Announcements -->
-        <div class="announcement-container">
+        <div id="events" class="announcement-container">
           <h2 class="announcement-header">Upcoming Events</h2>
           <div class="announcement-content">
             <ul class="announcement-list">
@@ -96,41 +105,30 @@
           </div>
         </div>
         <!-- About -->
-        <div class="about">
+        <div id="about-us" class="about">
           <div class="topic">
             <h2>About</h2>
             <p>
-              The National Service Scheme (NSS) is a Central Sector Scheme of
-              Government of India, Ministry of Youth Affairs & Sports. It
-              provides opportunity to the student youth of 11th & 12th Class of
-              schools at +2 Board level and student youth of Technical
-              Institution, Graduate & Post Graduate at colleges and University
-              level of India to take part in various Government led community
-              service activities & programmes. The primary objective of
-              developing the personality and character of the student youth
-              through voluntary community service. 'Education through Service'
-              is the purpose of the NSS. NSS was launched in 1969 in 37
-              Universities involving about 40,000 volunteers which has now
-              spread over 657 Universities and 51 +2 Councils/Directorates,
-              covering 20,669 Colleges/ Technical Institutions and 11,988 Senior
-              Secondary School. The College of Engineering Chengannur, an
-              institution of excellence in the domain of technical education,
-              was established in the year 1993, with a vision to create
-              engineers having the drive, skill, and confidence to become the
-              pioneers of tomorrow. The college functions with the highest order
-              of discipline so that all students are trained to excel in highly
-              professional environmentsThe vibrations of our campus invite you
-              to the unique experience of quality learning in a
-              multi-dimensional and participatory manner, where you too are part
-              of shaping the process. We strive to provide our students with the
-              best learning environment along with impeccable education, to
-              enable them to gain the skills they need in order to shape their
-              own future and that of the nation..
+              The National Service Scheme (NSS) is a Government of India
+              initiative under the Ministry of Youth Affairs & Sports. It offers
+              community service opportunities to students across various
+              educational levels. Started in 1969 with 37 universities and
+              40,000 volunteers, NSS has now expanded to 657 universities and 51
+              +2 Councils/Directorates, encompassing 20,669 colleges/technical
+              institutions and 11,988 senior secondary schools. The NSS aims to
+              develop students' personality and character through voluntary
+              community service, promoting "Education through Service."
             </p>
-          </div>
-          <div class="topic">
-            <h2>Motto</h2>
-            <p>The motto of National Service Scheme is NOT ME BUT YOU.</p>
+            <p>
+              Established in 1993, the College of Engineering Chengannur is
+              dedicated to producing engineers equipped with the skills and
+              confidence to lead. Operating with strict discipline, the college
+              fosters an environment for students to excel professionally. Our
+              campus offers a vibrant learning atmosphere where students
+              actively shape their educational journey. We are committed to
+              providing top-tier education, empowering students to carve their
+              path to success, both personally and for the nation's benefit.
+            </p>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: Lato, sans-serif;
+  background-color: hsla(240, 96%, 98%, 1);
 }
 section {
   position: absolute;
@@ -36,29 +40,39 @@ section::before {
 }
 
 section .signin {
+  background-color: hsla(240, 96%, 95%, 1);
   position: absolute;
-  width: 400px;
-  background: #222;
+  width: 800px;
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 40px;
-  border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+section .signin .logo {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+section .signin .logo img {
+  width: 100%;
+  object-fit: cover;
 }
 section .signin .content {
   position: relative;
-  width: 100%;
+  width: 400px;
+  background: rgb(48, 48, 131);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
+  padding: 40px;
 }
 section .signin .content h2 {
   font-size: 2em;
-  color: #0f0;
+  color: #fff;
   text-transform: uppercase;
 }
 section .signin .content .form {
@@ -74,7 +88,7 @@ section .signin .content .form .inputBox {
 section .signin .content .form .inputBox input {
   position: relative;
   width: 100%;
-  background: #333;
+  background: hsla(240, 96%, 98%, 1);
   border: none;
   outline: none;
   padding: 25px 10px 7.5px;
@@ -88,7 +102,7 @@ section .signin .content .form .inputBox i {
   left: 0;
   padding: 15px 10px;
   font-style: normal;
-  color: #aaa;
+  color: #888;
   transition: 0.5s;
   pointer-events: none;
 }
@@ -100,12 +114,12 @@ section .signin .content .form .inputBox i {
 .signin .content .form .inputBox input:valid ~ i {
   transform: translateY(-8px);
   font-size: 0.8em;
-  color: #fff;
+  color: #aaa;
 }
 .signin .content .form .inputBox input[type="submit"] {
   padding: 10px;
-  background: #0f0;
-  color: #000;
+  background: #e53624;
+  color: #fff;
   font-weight: 600;
   font-size: 1.35em;
   letter-spacing: 0.05em;
