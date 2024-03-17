@@ -6,7 +6,7 @@ body {
 }
 
 .announcement-container {
-  width: 300px; /* Adjust width as needed */
+  min-width: 300px; /* Adjust width as needed */
   height: 400px; /* Adjust height as needed */
   overflow: hidden;
   border: 3px solid rgb(48, 48, 131);
@@ -35,7 +35,7 @@ body {
   font-family: default;
   font-size: large;
   list-style-type: none;
-  padding: 300px 10px 0 10px;
+  padding: 10px 10px 0 10px;
   margin: 10px;
   animation: scroll-up 10s linear infinite normal none running; /* Adjust animation duration as needed */
 }
@@ -47,6 +47,10 @@ body {
   100% {
     transform: translateY(-100%);
   }
+}
+
+.about-and-announcement {
+  display: flex;
 }
 
 .description {
@@ -165,4 +169,89 @@ footer {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  min-width: 100%;
+  flex: 1;
+}
+img {
+  width: 100%; /* Enlarge width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  max-height: 400px; /* Enlarge height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  opacity: 0.3;
+}
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+}
+.arrow-left {
+  left: 10px;
+}
+.arrow-right {
+  right: 10px;
+}
+.forum-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.forum-item {
+  flex: 1;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #444; /* Dark Gray */
+  background-color: #fff;
+  margin: 0 10px;
+}
+.nrpf {
+  background-color: #035412; /* Green */
+}
+.ktu-care {
+  background-color: #0f0f0f; /* Black */
+}
+.rudrasena {
+  background-color: #660808; /* Red */
+}
+.thanal {
+  background-color: #400259; /* Purple */
+}
+h2,
+p {
+  color: #fff6f6; /* Light Gray */
+  max-width: 70ch;
+}
+h2 {
+  font-family: "Arial", sans-serif; /* Change the font of the heading */
+}
+p {
+  text-align: justify;
 }
