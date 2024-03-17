@@ -1,92 +1,10 @@
 body {
+  background-color: blueviolet;
+  /* Global Styles */
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: large;
-}
-
-  .announcement-container {
-    width: 300px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
-    overflow: hidden;
-    border: 3px solid rgb(48, 48, 131);
-    border-radius: 5px;
-    padding: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .announcement-header {
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 0px;
-    border: 3px solid rgb(48, 48, 131);
-    background-color: rgb(48, 48, 131);
-    padding: 25px;
-    color: white;
-    
-  }
-  
-  .announcement-content {
-    overflow: hidden;
-    line-height: 50px;
-    color: rgb(45, 45, 131);
-  }
-  
-  .announcement-list {
-    font-family:default;
-    font-size: large;
-    list-style-type: none;
-    padding: 300px 10px 0 10px;
-    margin: 10px;
-    animation: scroll-up 10s linear infinite normal none running; /* Adjust animation duration as needed */
-  }
-  
-  @keyframes scroll-up {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
-  }
-  
-
-.description {
-    margin-bottom: 20px;
-  }
-  
-  .description h2 {
-    font-size: 20px;
-    color: black;
-  }
-  
-  
-  
-  .description p {
-    font-size: 20px;
-    color: black;
-    line-height: 1.5;
-  }
-
-.topic {
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  font-weight: 100;
-  font-size: large;
-}
-
-.topic h2 {
-  color: black;
-  margin-top: 0;
-  font-size: large;
-  
-}
-
-.topic p {
-  color: black;
-  line-height: 1.5;
-  font-size:large;
 }
 
 .container {
@@ -170,4 +88,6 @@ footer {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+}
+
 }
