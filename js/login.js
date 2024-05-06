@@ -11,9 +11,9 @@ onAuthStateChanged(auth, (user) => {
     getDoc(doc(db, "users", user.uid)).then((doc) => {
       console.log(doc.data());
       if (doc.data().isAdmin) {
-        window.location.href = "adminprofile";
+        window.location.href = "adminprofile.html";
       } else {
-        window.location.href = "profile";
+        window.location.href = "profile.html";
       }
     });
   } else {

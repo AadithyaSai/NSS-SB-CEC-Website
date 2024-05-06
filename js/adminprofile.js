@@ -19,7 +19,7 @@ import { ref, getDownloadURL, deleteObject } from "firebase/storage";
 
 onAuthStateChanged(auth, (user) => {
   if (!user) {
-    window.location.href = "login";
+    window.location.href = "login.html";
   }
 });
 
