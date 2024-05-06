@@ -34,57 +34,28 @@ body {
 }
 
 .announcement-content {
-  display: block;
   overflow: hidden;
   line-height: 50px;
   color: rgb(45, 45, 131);
 }
 
 .announcement-list {
-  overflow: hidden;
   font-family: default;
   font-size: large;
   list-style-type: none;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  height: fit-content;
-  /* animation: scroll-up 10s linear infinite normal none running; Adjust animation duration as needed */
+  padding: 10px 10px 0 10px;
+  margin: 10px;
+  animation: scroll-up 10s linear infinite normal none running; /* Adjust animation duration as needed */
 }
 
-.announcement-list li {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  margin: 0;
-  padding-left: 10px;
-  padding-right: 5px;
-  border: 2px solid rgb(48, 48, 131);
-  line-height: 1.3em;
-}
-
-.announcement-list li h4 {
-  margin: 0;
-}
-
-.announcement-list li div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.announcement-list li span {
-  color: slategray;
-  font-size: small;
-}
-
-/* @keyframes scroll-up {
+@keyframes scroll-up {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-100%);
   }
-} */
+}
 .motto {
   color: rgb(48, 48, 131);
   font-family: serif;
@@ -228,8 +199,6 @@ footer {
   max-width: 1000px;
   margin: auto;
   overflow: hidden;
-  padding-top: 6px;
-  border-radius: 15px;
 }
 .carousel {
   display: flex;

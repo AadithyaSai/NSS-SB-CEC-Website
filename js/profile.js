@@ -13,18 +13,19 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     uid = user.uid;
 
-    const signOutLink = document.getElementById("signOutLink");
+    const contentDiv = document.getElementById("content");
+    const p = document.createElement("p");
+    p.innerHTML = `hey ${user.email} <br />`;
+    const signOutLink = document.createElement("a");
+    signOutLink.text = "Sign Out";
+    signOutLink.href = "/login.html";
     signOutLink.onclick = () => {
       signOut(auth)
         .then(() => console.log("User has been signed out successfully"))
         .catch((err) => console.log(err));
     };
-
-    const contentDiv = document.getElementById("content");
-    const p = document.createElement("p");
-    p.id = "greeting";
-    // contentDiv.prepend(signOutLink);
-    // contentDiv.prepend(p);
+    p.appendChild(signOutLink);
+    contentDiv.prepend(p);
 
     const userData = doc(collection(db, "users"), uid);
 
@@ -41,8 +42,8 @@ onAuthStateChanged(auth, (user) => {
       const bloodProofRef = ref(storage, `${uid}/blood/proof`);
       uploadBytes(bloodProofRef, bloodProofFile).then((snapshot) => {
         console.log("Uploaded proof!");
-        bloodForm.classList.toggle("d-none");
-        bloodDone.classList.toggle("d-none");
+        bloodForm.classList.add("hide");
+        bloodDone.classList.remove("hide");
         updateDoc(userData, {
           bloodDone: true,
         });
@@ -58,30 +59,26 @@ onAuthStateChanged(auth, (user) => {
         updateDoc(userData, {
           thanalDone: true,
         });
-        thanalForm.classList.toggle("d-none");
-        thanalDone.classList.toggle("d-none");
+        thanalForm.classList.add("hide");
+        thanalDone.classList.remove("hide");
         console.log("Uploaded proof!");
       });
     });
 
     getDoc(userData)
       .then((snapshot) => {
-        document.getElementById("content").classList.toggle("d-none");
-        document.getElementById("wait").classList.toggle("d-none");
+        document.getElementById("content").classList.remove("hide");
+        document.getElementById("wait").classList.add("hide");
         const hours = snapshot.data().hours;
-        const name = snapshot.data().name;
-        const unit = snapshot.data().unit;
         document.getElementById("hourCount").textContent = hours;
-        document.getElementById("name").textContent = name;
-        document.getElementById("unit").textContent = unit;
 
         if (snapshot.data().bloodDone) {
-          bloodForm.classList.toggle("d-none");
-          bloodDone.classList.toggle("d-none");
+          bloodForm.classList.add("hide");
+          bloodDone.classList.remove("hide");
         }
         if (snapshot.data().thanalDone) {
-          thanalForm.classList.toggle("d-none");
-          thanalDone.classList.toggle("d-none");
+          thanalForm.classList.add("hide");
+          thanalDone.classList.remove("hide");
         }
       })
       .catch((e) => console.log(`Error: ${e}`));
