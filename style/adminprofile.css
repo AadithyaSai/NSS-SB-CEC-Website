@@ -1,0 +1,19 @@
+body {
+  background-color: hsla(240, 96%, 98%, 1);
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.modal-content {
+  background-color: hsla(240, 96%, 98%, 1);
+}
+
+.btn-primary {
+  background-color: rgb(48, 48, 131);
+}
+
+.btn-primary:hover {
+  background-color: #e53624;
+}
