@@ -35,17 +35,18 @@ body {
 
 .announcement-content {
   display: block;
-  overflow: hidden;
+  overflow-y: auto;
+  height: inherit;
+  scroll-behavior: smooth;
   line-height: 50px;
   color: rgb(45, 45, 131);
 }
 
 .announcement-list {
-  overflow: hidden;
+  overflow: scroll;
   font-family: default;
   font-size: large;
   list-style-type: none;
-  overflow: hidden;
   padding: 0;
   margin: 0;
   height: fit-content;

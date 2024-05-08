@@ -26,24 +26,12 @@ getDocs(q).then((querySnapshot) => {
 });
 
 let i = 0;
-let par = eventsList.parentElement.parentElement.getBoundingClientRect();
+let rev = false;
 setInterval(() => {
-  i += 1;
-  eventsList.animate(
-    [{}, { transform: `translateY(-${i}px)` }],
-    {
-      duration: 1000,
-      iterations: Infinity,
-      fill: "forwards",
-    },
-    1
-  );
-  let rect = eventsList.getBoundingClientRect();
-
-  if (par.top + par.height > rect.top + rect.height) {
-    eventsList.style.transform = `translateY(${i}px)`;
-    i = 0;
-  }
+  eventsDiv.scrollTo({ top: rev ? i-- : i++, behavior: "smooth" });
+  if (i === eventsDiv.scrollHeight - eventsDiv.offsetHeight) rev = true;
+  else if (i === 0) rev = false;
+  console.log(i);
 }, 100);
 
 let currentSlide = 0;
